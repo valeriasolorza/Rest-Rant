@@ -8,7 +8,7 @@ function Def (html) {
     return (
         <html>
             <head>
-                <title>Title</title>
+                <title>-Title-</title>
             </head>
             <body>
                 {html.children}
