@@ -1,8 +1,5 @@
 const router = require('express').Router()
 
-
-
-
 // GET /places
 router.get('/', (req, res) => {
     let places = [{
@@ -22,8 +19,10 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    res.send('page work')
-})
+    console.log(req.body)
+    res.send('POST / page work')
+  })
+  
 
 router.get('/new', (req, res) => {
   res.render('places/new')
