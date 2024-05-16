@@ -1,5 +1,20 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+}
+
 h1 {
-    text-align: center;
-    color: cornflowerblue;
-  }
-  
+  text-align: center;
+  color: cornflowerblue;
+}
+
+main {
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 20px;
+  background-color: white;
+}
+
+img {
+  height: 20em;
+}
