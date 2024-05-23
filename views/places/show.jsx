@@ -12,6 +12,12 @@ function show(data) {
           </h3>
         </div>
         <h1>{data.place.name}</h1>
+        <h2>Description</h2>
+
+        <h3>{data.place.showEstablished()}</h3>
+
+        <h4>Serving {data.place.cuisines}</h4>
+
         <h2>Ratings</h2>
         <p>no ratings</p>
         <h2>Comments</h2>
