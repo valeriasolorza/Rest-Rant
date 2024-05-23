@@ -38,21 +38,34 @@ router.get('/:id', (req, res) => {
     }
 })
 
+//something wrong here!
+router.put('/:id', (req, res) => {
+    console.log("Hello editor") //does run 
+    let id = Number(req.params.id)
+
+        // Save the new data into places[id]
+        places[id] = req.body
+        res.redirect(`/places/${id}`)
+    }
+  )
+  
+
+
 router.delete('/:id', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
-      res.render('error404')
+        res.render('error404')
     }
     else if (!places[id]) {
-      res.render('error404')
+        res.render('error404')
     }
     else {
-      places.splice(id, 1)
-      res.redirect('/places')
+        places.splice(id, 1)
+        res.redirect('/places')
     }
-  })
-  
-  router.get('/:id/edit', (req, res) => {
+})
+
+router.get('/:id/edit', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
         res.render('error404')
@@ -61,11 +74,15 @@ router.delete('/:id', (req, res) => {
         res.render('error404')
     }
     else {
-      res.render('places/edit', { place: places[id] })
+        res.render('places/edit', { place: places[id] })
     }
-  })
-  
-  
+})
+
+
+//comment
+//comment
+
+
 
 
 module.exports = router
