@@ -35,7 +35,6 @@ function show(data) {
     <Def>
       <main className="show-main">
 
-        {/* •••••••••••••••••••••••••••••• Left Section •••••••••••••••••••••••••••••• */}
         <section className='main-left-section'>
           <div>
             <img src={data.place.pic} alt={data.place.name} />
@@ -45,7 +44,7 @@ function show(data) {
           </div>
         </section>
 
-        {/* •••••••••••••••••••••••••••••• Right Section •••••••••••••••••••••••••••••• */}
+     
         <section className='main-right-section'>
           <div>
             <h1>{data.place.name}</h1>
@@ -81,7 +80,6 @@ function show(data) {
           </div>
         </section>
 
-        {/* •••••••••••••••••••••••••••••• Mid Section •••••••••••••••••••••••••••••• */}
         <section className="row main-mid-section">
           <div>
             <h2
@@ -95,7 +93,6 @@ function show(data) {
           </div>
         </section>
 
-        {/* •••••••••••••••••••••••••••••• Bottom Section •••••••••••••••••••••••••••••• */}
         <section className="row main-bottom-section">
           <h2
             style={{ color: 'cornflowerblue' }}
@@ -104,7 +101,7 @@ function show(data) {
           </h2>
 
           <form id="comment-form" action={`/places/${data.place._id}/comment`} method="POST">
-            <label htmlFor="author"> Author </label>
+            <label htmlFor="author"> Your Name: </label>
             <div
               style={{
                 display: 'flex',
@@ -122,7 +119,7 @@ function show(data) {
               </input>
 
               <div style={{ flexGrow: '1' }}>
-                <label htmlFor="content"> Content </label>
+                <label htmlFor="content"> Comment: </label>
                 <input
                   type="textarea"
                   name="content"
